@@ -1,0 +1,33 @@
+<html xmlns:th="http://thymeleaf.org"
+	   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Inicío</title>
+	<meta charset="UTF-8">
+ 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script> 
+</head>
+<body>
+<h1>Lista de Filmes</h1>
+<a href="/cadastrarFilmes" class="waves-effect waves-light btn" ><i class="material-icons left">add_circle_outline</i>Cadastrar Filmes</a>
+<br><br>
+<table class="container">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Ano</th>
+			<th>Genêro</th>
+			<th>Sinopse</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="filme : ${filmes}">
+		<td><span th:text="${filme.nome}"></span></td>
+		<td><span th:number="${filme.ano}"></span></td>
+		<td><span th:text="${filme.genero}"></span></td>
+		<td><span th:text="${filme.sinopse}"></span></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
