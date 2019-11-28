@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Cadastrar Filmes</title>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+</head>
+<body>
+	<h1>Lista de Filmes</h1>
+	<a href="/" class="waves-effect waves-light btn"><i
+		class="material-icons left">format_list_bulleted</i>Lista Filmes</a>
+	<br>
+	<br>
+	<form class="container" method="post">
+		Nome: <input type="text" value="" name="nome" />
+		<div class="row">
+			<div class="input-field col s6">
+				Ano: <input type="number" value="" name="ano" />
+			</div>
+			<div class="input-field col s6">
+				Genero: <input type="text" value="" name="genero" />
+			</div>
+		</div>
+		<div class="input-field col s6">
+			Sinopse: <input type="text" value="" name="sinopse" />
+		</div>
+		<button type="submit" class="waves-effect waves-light btn">Salvar
+		</button>
+		<button type="reset" class="waves-effect waves-light btn">Limpar
+			Campos</button>
+	</form>
+</body>
+</html>
